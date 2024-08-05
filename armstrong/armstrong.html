@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        let result = document.getElementById("result");
+        let number = prompt("Enter a number");
+        numberLength = number.length;
+        let sum = 0;
+        for(let i = 0 ; i < numberLength ; i++){
+            sum += Math.pow(parseInt(number[i]),numberLength)
+        }
+        
+        if(sum == number){
+            result.innerHTML = `${number} is an armstrong number`;
+        }
+        else{
+            result.innerHTML = `${number} is not an armstrong number`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong number</title>
+</head>
+
+<body>
+    <h1 id="result"></h1>
+    <script>
+        let result = document.getElementById("result");
+        let startingNumber = prompt("Enter start range");
+        let endingNumber = prompt("Enter end range");
+        for (let i = startingNumber; i <= endingNumber; i++) {
+            let numberOfDigits = i.length;
+            let sum = 0;
+            let temp = i;
+            while (temp > 0) { 
+                let remainder = temp % 10;
+                sum += remainder ** numberOfDigits;
+                // removing last digit from the number
+                temp = parseInt(temp / 10); // convert float into integer
+            }
+
+            if (sum == i) {
+                result.innerHTML += `${i} is a armstrong number`;
+            }
+            else{
+                result.innerHTML += `${i} is not an armstrong number`;
+            }
+        }
+            
+    </script>
+</body>
+
+</html>

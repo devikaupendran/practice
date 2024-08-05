@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        let number = Number(prompt("Enter a number"));
+        let result = document.getElementById("result");
+        let factors = "The factors of " + number + " are:";
+        for(let i = 1 ; i <= number ; i++){
+            if(number % i == 0){
+                factors += i + `<br>`;
+            }
+        }
+        result.innerHTML = `${factors}` ;
+    </script>
+</body>
+</html>

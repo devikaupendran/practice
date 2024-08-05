@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factorial </title>
+    <style>
+        label{
+            font-size:4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>MULTIPLICATION TABLE</h1><br><br>
+        <label id="result"></label>
+    </center>
+    <script>
+        let result = document.getElementById("result");
+    let number = parseInt(prompt("Enter a number"));
+    let num;
+    for(i = 1 ; i <= 10 ; i++){
+        num = i * number;
+        result.innerHTML += `${i} * ${number} = ${num} <br>`;
+    }
+    </script>
+</body>
+
+</html>
